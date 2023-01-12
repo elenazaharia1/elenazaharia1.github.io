@@ -4,69 +4,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matei's CV</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Elena's CV</title>
   </head>
   <body>
     <header>
-      <div class="header-content">
-        <img src="eu.jpg" alt="pic of me as a cat in a wig" height="100" />
-        <div class="name">
-          <h1>Elena Zaharia</h1>
-          <h2 id="job-title">Student @ FastTrackIT</h2>
-        </div>
-      </div>
+      <h1>Matei Nicolae</h1>
+      <img src="seflie.jpg" height="50" />
+      <h2 id="job-title">Trainer @ FastTrackIT & Web Developer @ RWS</h2>
+
+      <p style="color: red; text-align: right">
+        <strong>Welcome</strong> to my site
+      </p>
+
       <ul id="top-menu-bar">
         <li><a href="#" onclick="displayPage('home')">HOME</a></li>
         <li><a href="#" onclick="displayPage('skills')">Skills</a></li>
-        <li><a href="#" onclick="displayLanguages()">Known Languages</a></li>
-        <li><a href="#" onclick="displayProjects()">Projects</a></li>
+        <li>
+          <a href="#" onclick="displayPage('languages')">Known Languages</a>
+        </li>
+        <li><a href="#" onclick="displayPage('projects')">Projects</a></li>
       </ul>
     </header>
+
     <section id="content">
       <div id="side-menu">
         <section>
-          <div class="page1">
-            <form action="">
-              <div>
-                <label for="subscriberEmail">Enter your Email</label>
-                <input
-                  type="email"
-                  required
-                  name="email"
-                  id="subscriberEmail"
-                  placeholder="your@email.com"
-                />
-              </div>
-              <div>
-                <label for="subsriber">Name:</label>
-                <input type="text" required name="nume" id="subscriber" />
-              </div>
-              <button type="submit">Subscribe</button>
-            </form>
-          </div>
+          <form action="">
+            <div>
+              <label for="subscriberEmail">Enter your Email</label>
+              <input
+                type="email"
+                required
+                name="email"
+                id="subscriberEmail"
+                placeholder="your@email.com"
+              />
+            </div>
+            <div>
+              <label for="subscriber">Name:</label>
+              <input
+                type="text"
+                required
+                name="nume"
+                id="subscriber"
+                placeholder="Full Name"
+              />
+            </div>
+            <button type="submit">Subscribe</button>
+          </form>
         </section>
-        <section class="page1">ggggggggg</section>
+        <section>Menu 2</section>
       </div>
+
       <div id="main">
-        <section>
-          <div class="page" id="home">
-            <h2>Home</h2>
+        <div id="home" class="page">
+          <h2>Home</h2>
 
-            <p>Some info about me</p>
-          </div>
+          <p>Some info about me... comming soon!</p>
+        </div>
 
-          <div class="page" id="skills">
-            <h2>Skills</h2>
+        <div id="skills" class="page">
+          <h2>Skills</h2>
 
-            <ul id="skills-list"></ul>
-          </div>
-        </section>
-        <div class="page" id="languages">
+          <ul id="skills-list"></ul>
+        </div>
+
+        <div id="languages" class="page">
           <h2>Known Languages</h2>
           <table border="1">
-            <th>Language</th>
-            <th>Level</th>
+            <tr>
+              <th>Language</th>
+              <th>Level</th>
+            </tr>
             <tr>
               <td>Romanian</td>
               <td>Native</td>
@@ -76,23 +86,24 @@
               <td>Proficient</td>
             </tr>
             <tr>
-              <td>Spanish</td>
-              <td>Medium</td>
-            </tr>
-            <tr>
-              <td>Japanese</td>
-              <td>Beginner</td>
+              <td>Russian</td>
+              <td>So so</td>
             </tr>
           </table>
         </div>
-        <div class="page" id="projects">
-          <h2>projects</h2>
 
-          <p>Some info about me</p>
+        <div id="projects" class="page">
+          <h2>Projects</h2>
+
+          <p>Some info about me... comming soon!</p>
         </div>
       </div>
     </section>
-    <footer><a target="_blank" href="https://www.google.com">Google</a></footer>
+
+    <footer>
+      <a target="_blank" href="https://www.google.com">Google</a>
+    </footer>
+
     <script src="index.js"></script>
   </body>
 </html>
