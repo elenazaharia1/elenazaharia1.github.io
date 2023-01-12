@@ -12,22 +12,15 @@ skillsEl.innerHTML = skillsHTML;
 
 var pageIds = ["home", "skills", "languages", "projects"];
 
-function hidePage(id) {
-  hide(id);
-}
-
 function hideAllPages() {
-  pageIds.forEach(hidePage);
-  // hide("home");
-  // hide("skills");
-  // hide("languages");
-  // hide("projects");
+  pageIds.forEach(function (pageId) {
+    hide(pageId);
+  });
 }
 
 function show(id) {
   document.getElementById(id).style.display = "block";
 }
-
 function hide(id) {
   document.getElementById(id).style.display = "none";
 }
@@ -36,17 +29,14 @@ function displayHome() {
   hideAllPages();
   show("home");
 }
-
 function displaySkills() {
   hideAllPages();
   show("skills");
 }
-
 function displayLanguages() {
   hideAllPages();
   show("languages");
 }
-
 function displayProjects() {
   hideAllPages();
   show("projects");
