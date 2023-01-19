@@ -9,12 +9,11 @@ var skills = [
 
 var skillsHTML = "";
 
-skills.forEach(function (skill) {
-  console.info(skill);
-  skillsHTML += "<li>" + skill.name + " - " + skill.endorcements + "</li>";
+var s = skills.map(function (skill) {
+  return "<li>" + skill.name + " - " + skill.endorcements + "</li>";
 });
 
-skillsEl.innerHTML = skillsHTML;
+skillsEl.innerHTML = s.join("");
 
 function hideAllPages() {
   var pages = document.querySelectorAll(".page");
