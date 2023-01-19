@@ -9,23 +9,14 @@ var skills = [
 
 var skillsHTML = "";
 
-for (var i = 0; i < skills.length; i++) {
-  skillsHTML +=
-    "<li>" + skills[i].name + " - " + skills[i].endorcements + "</li>";
-}
+skills.forEach(function (skill) {
+  console.info(skill);
+  skillsHTML += "<li>" + skill.name + " - " + skill.endorcements + "</li>";
+});
 
 skillsEl.innerHTML = skillsHTML;
 
-// var pageIds = ["home", "skills", "languages", "projects"];
-
 function hideAllPages() {
-  // var pages = document.querySelectorAll(".page");
-  // pages.forEach(function (page) {
-  //   console.info("inside pages", page.id);
-  // });
-  // pageIds.forEach(function (page) {
-  //   hide(pageIds);
-  // });
   var pages = document.querySelectorAll(".page");
   pages.forEach(function (page) {
     hide(page.id);
