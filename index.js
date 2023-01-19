@@ -10,7 +10,8 @@ var skills = [
 var skillsHTML = "";
 
 var s = skills.map(function (skill) {
-  return "<li>" + skill.name + " - " + skill.endorcements + "</li>";
+  // return "<li>" + skill.name + " - " + skill.endorcements + "</li>";
+  return `<li> ${skill.name}   -   ${skill.endorcements}  </li>`;
 });
 
 skillsEl.innerHTML = s.join("");
