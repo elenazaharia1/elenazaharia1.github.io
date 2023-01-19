@@ -38,4 +38,19 @@ function displayPage(id) {
   show(id);
 }
 
+//initMenu functie
+function initMenu() {
+  console.warn("init menu");
+
+  document
+    .getElementById("top-menu-bar")
+    .addEventListener("click", function (e) {
+      if (e.target.matches("a")) {
+        var id = e.target.getAttribute("data-page");
+        displayPage(id);
+      }
+    });
+}
+
 displayPage("home");
+initMenu();
