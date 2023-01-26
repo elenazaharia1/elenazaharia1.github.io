@@ -6,15 +6,14 @@ var skills = [
   { name: "JS", endorcements: 4 },
   { name: "Drive", endorcements: 2 },
 ];
+//var skills = [["HTML", 5], ["CSS", 3], "JS", "Drive"];
+// var endorcements = [5, 6, 5, 1];
 
-var skillsHTML = "";
-
-var s = skills.map(function (skill) {
-  // return "<li>" + skill.name + " - " + skill.endorcements + "</li>";
-  return `<li> ${skill.name}   -   ${skill.endorcements}  </li>`;
+var skillsHTML = skills.map(function (skill) {
+  return `<li>${skill.name} - <span>${skill.endorcements}</span></li>`;
 });
 
-skillsEl.innerHTML = s.join("");
+skillsEl.innerHTML = skillsHTML.join("");
 
 function hideAllPages() {
   var pages = document.querySelectorAll(".page");
@@ -35,19 +34,17 @@ function displayPage(id) {
   show(id);
 }
 
-//initMenu functie
 function initMenu() {
-  console.warn("init menu");
-
   document
     .getElementById("top-menu-bar")
     .addEventListener("click", function (e) {
       if (e.target.matches("a")) {
-        var id = e.target.getAttribute("data-page");
+        // var id = e.target.getAttribute("data-page");
+        var id = e.target.dataset.page;
         displayPage(id);
       }
     });
 }
 
-displayPage("home");
+displayPage("skills");
 initMenu();
