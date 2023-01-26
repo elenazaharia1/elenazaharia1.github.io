@@ -3,11 +3,23 @@ html {
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   min-height: 100%;
   margin: 0;
+  padding: 0;
   background-color: #f3f2ef;
   display: flex;
   flex-direction: column;
+}
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-display: inline-block;
+}
+a:hover {
+  color: rgb(31, 23, 31);
+  cursor: pointer;
 }
 
 #content {
@@ -16,6 +28,7 @@ body {
   flex-direction: row;
 }
 #main {
+  display: flex;
   flex: 2;
 }
 #side-menu {
@@ -37,6 +50,7 @@ h1 {
 }
 
 .page {
+  flex: 1;
   display: none;
   border: 2px solid rgb(145, 109, 180);
   background-color: #fff;
@@ -57,7 +71,8 @@ h1 {
   text-align: center;
   background-color: rgb(159, 147, 159);
   color: #fff;
-  margin-top: 0;
+  margin: 0;
+  padding: 0.2rem 0;
 }
 
 #top-menu-bar li {
@@ -69,10 +84,11 @@ h1 {
   background-color: rgb(145, 109, 180);
 }
 #top-menu-bar a {
-  text-decoration: none;
-  color: #fff;
   padding: 5px 0;
   display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
 }
 #top-menu-bar a:hover {
   color: rgb(31, 23, 31);
@@ -88,22 +104,21 @@ h1 {
   );
 }
 img {
+  display: block;
   height: 100px;
   border: 6px solid rgba(45, 9, 45, 0.42);
   border-radius: 50%;
 }
 .name {
-  font-family: sans-serif;
   color: rgba(93, 16, 114, 0.685);
-}
+  font-size: 1.4rem;
 
-.name {
-  font-family: sans-serif;
-  color: rgba(93, 16, 114, 0.686);
+  font-weight: 900;
 }
 
 .header-content {
   display: flex;
+  align-items: center;
   padding: 0.5rem;
   gap: 2rem;
   background-image: linear-gradient(
@@ -116,9 +131,37 @@ img {
 footer {
   padding: 0.6rem;
   border: 2px solid purple;
+  text-align: center;
   background-image: linear-gradient(
     to right,
     rgba(128, 0, 255, 0.317),
     rgb(115, 0, 255)
   );
+}
+
+footer > a {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.input__form {
+  padding: 1rem;
+}
+input {
+  margin: 1rem;
+}
+button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 0.4rem 1.5rem;
+  background-color: rgb(145, 109, 180);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+button:hover {
+  color: rgb(31, 23, 31);
+  cursor: pointer;
 }
