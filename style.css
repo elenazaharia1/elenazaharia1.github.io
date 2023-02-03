@@ -7,6 +7,7 @@ html {
   --clr--700: #7689ca;
   --clr-600: rgba(93, 16, 114, 0.685);
   --clr-hover-a: rgb(223, 205, 223);
+  --clr-label: #4d4d65;
 }
 
 body.dark-mode {
@@ -15,6 +16,7 @@ body.dark-mode {
   --clr--700: #1d2953;
   --clr-600: rgba(93, 16, 114, 0.685);
   --clr-hover-a: rgb(31, 23, 31);
+  --clr-label: #111;
 }
 
 body {
@@ -305,7 +307,7 @@ button:hover {
 .label {
   width: 50px;
   height: 24px;
-  background-color: #111;
+  background-color: var(--clr-label);
   display: flex;
   border-radius: 50px;
   align-items: center;
